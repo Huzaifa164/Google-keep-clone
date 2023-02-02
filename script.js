@@ -49,7 +49,7 @@ const addFunction = (text = "") => {
   });
 };
 
-const notes = JSON.parse(localStorage.getItem('notes'));
+const notes = (JSON.parse(localStorage.getItem('notes')) || []);
 
 notes.forEach((note) => {
     addFunction(note);
